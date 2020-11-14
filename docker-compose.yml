@@ -11,8 +11,8 @@ services:
     volume:
       - "$PWD/volumes/example-application:/var/example-application"
     ports:
-      - "$PORT1:80"
-      - "$PORT2:3000"
+      - "${PORT1}:80"
+      - "${PORT2}:3000"
     networks:
       - example-application
     restart: unless-stopped
