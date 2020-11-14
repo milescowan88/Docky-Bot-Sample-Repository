@@ -1,0 +1,20 @@
+version: "3.8"
+services:
+  example-application:
+    container_name: example-application
+    build:
+      context: ./dockerfile
+      dockerfile: Dockerfile
+    image: example-application
+      args:
+        buildno: 1
+    volume:
+      - "$PWD/volumes/example-application:/var/example-application"
+    ports:
+      - "$PORT1:80"
+      - "$PORT2:3000"
+    networks:
+      - example-application
+    restart: unless-stopped
+networks:
+  example-application:
