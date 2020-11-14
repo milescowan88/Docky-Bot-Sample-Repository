@@ -1,2 +1,2 @@
 FROM alpine:latest
-RUN echo "Hello World"
+RUN cat exampledoc.txt
