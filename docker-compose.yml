@@ -6,8 +6,6 @@ services:
       context: ./dockerfile
       dockerfile: Dockerfile
     image: example-application
-      args:
-        buildno: 1
     volume:
       - "$PWD/volumes/example-application:/var/example-application"
     ports:
