@@ -7,7 +7,7 @@ services:
       dockerfile: Dockerfile
     image: example-application
     volumes:
-      - "cd/volumes/example-application:/var/example-application"
+      - "./volumes/example-application:/var/example-application"
     ports:
       - 80
       - 3000
