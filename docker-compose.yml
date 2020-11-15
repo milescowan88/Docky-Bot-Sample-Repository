@@ -6,7 +6,7 @@ services:
       context: ./dockerfile
       dockerfile: Dockerfile
     image: example-application
-    volume:
+    volumes:
       - "$PWD/volumes/example-application:/var/example-application"
     ports:
       - "${PORT1}:80"
